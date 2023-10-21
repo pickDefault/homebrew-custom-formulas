@@ -68,7 +68,8 @@ class Vim < Formula
                           "--disable-gui",
                           "--without-x",
                           "--enable-luainterp",
-                          "--with-lua-prefix=#{Formula["lua"].opt_prefix}"
+                          "--with-lua-prefix=#{Formula["lua"].opt_prefix}",
+                          "--with-features=huge"
     system "make"
     # Parallel install could miss some symlinks
     # https://github.com/vim/vim/issues/1031
